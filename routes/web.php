@@ -15,7 +15,8 @@ use TCG\Voyager\Facades\Voyager;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('auth.register_customer');
 })->name('dashboard');
 
 Auth::routes(['verify' => true]);
