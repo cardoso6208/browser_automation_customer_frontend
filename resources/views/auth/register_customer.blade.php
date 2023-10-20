@@ -243,7 +243,7 @@
             },
             submitHandler: function(form) {
                 // form.submit();
-                let link =  "https://2e2f-96-44-161-4.ngrok-free.app/registerCustomer";
+                let link =  "{{ env('CUSTOMER_API_URL') }}";
 
                 $.ajax({
                     type: "POST",
