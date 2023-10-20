@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app2')
 
 @section('content')
     <div class="container">
@@ -279,14 +279,15 @@
                     success: function(data, textStatus, error) {
                         console.log(data);
                         if(data.state == 1){
-                            Toaster.toast(data.message, {
-                                autoClose: true,
-                                autoCloseDelay: 5000,
-                                color: '#4CAF50',
-                                position: 'right-top',
-                                onClick: function(){}
-                            });
-                            clear_value();
+                            location.href = "{{ env('CUSTOMER_API_REDIRECT_URL') }}";
+                            // Toaster.toast(data.message, {
+                            //     autoClose: true,
+                            //     autoCloseDelay: 5000,
+                            //     color: '#4CAF50',
+                            //     position: 'right-top',
+                            //     onClick: function(){}
+                            // });
+                            // clear_value();
                         }else{
                             Toaster.error(data.message, {
                                 autoClose: true,
