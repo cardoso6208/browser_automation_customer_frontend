@@ -352,7 +352,7 @@
         }
 
         @if(env("APP_ENV") == "local")
-            init_value();
+            // init_value();
         @endif
     </script>
 @endpush
