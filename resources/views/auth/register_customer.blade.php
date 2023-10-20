@@ -159,7 +159,7 @@
                                         <input class="form-check-input" type="checkbox" name="active_send_setup_email"
                                             id="active_send_setup_email" {{ old('active_send_setup_email') ? 'checked' : '' }}>
                                         <label class="form-check-label" for="active_send_setup_email">
-                                            Add Cookie Consent Banner to Company's Website
+                                            Active Send Setup Email
                                         </label>
                                     </div>
                                 </div>
