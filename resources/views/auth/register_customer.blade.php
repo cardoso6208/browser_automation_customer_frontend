@@ -153,6 +153,17 @@
                                     </div>
                                 </div>
                             </div> --}}
+                            <div class="row mb-3">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="active_send_setup_email"
+                                            id="active_send_setup_email" {{ old('active_send_setup_email') ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="active_send_setup_email">
+                                            Add Cookie Consent Banner to Company's Website
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row mb-0">
                                 <div class="col-md-6 offset-md-4">
                                     <button type="submit" class="btn btn-dark">
@@ -257,8 +268,9 @@
                         "email": $("#email").val(),
                         "phone": $("#phone").val(),
                         "new_password": $("#new_password").val(),
-                        "confirm_password": $("#confirm_password").val()
+                        "confirm_password": $("#confirm_password").val(),
                         // "add_cookie_banner": $('#add_cookie_banner').is(':checked') ? true : false,
+                        "active_send_setup_email": $('#active_send_setup_email').is(':checked') ? true : false
                     },
                     beforeSend: function(){
                         console.log("processing ...");
@@ -305,6 +317,7 @@
             $("#new_password").val("asdfASDF1234!@#$"),
             $("#confirm_password").val("asdfASDF1234!@#$")
             // $('#add_cookie_banner').prop('checked', false);
+            $('#active_send_setup_email').prop('checked', false);
         }
 
         function clear_value(){
@@ -317,6 +330,7 @@
             $("#new_password").val("");
             $("#confirm_password").val("");
             // $('#add_cookie_banner').prop('checked', false);
+            $('#active_send_setup_email').prop('checked', false);
         }
 
         function test_toast(){
