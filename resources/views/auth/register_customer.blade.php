@@ -1,179 +1,235 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header" style="background:linear-gradient(118deg, rgba(11, 17, 27, 1), rgba(11, 17, 27, 0.7))!important; color:white;">{{ __('Register') }}</div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header"
+                        style="background:linear-gradient(118deg, rgba(11, 17, 27, 1), rgba(11, 17, 27, 0.7))!important; color:white;">
+                        {{ __('Register') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" id="register-form">
-                        @csrf
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('register') }}" id="register-form">
+                            @csrf
 
-                        <div class="row mb-3">
-                            <label for="company_name" class="col-md-4 col-form-label text-md-end">{{ __('Company Name') }}</label>
+                            <div class="row mb-3">
+                                <label for="company_name"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Company Name') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="company_name" type="text" class="form-control @error('company_name') is-invalid @enderror" name="company_name" value="{{ old('company_name') }}" required autocomplete="company_name" autofocus>
+                                <div class="col-md-6">
+                                    <input id="company_name" type="text"
+                                        class="form-control @error('company_name') is-invalid @enderror" name="company_name"
+                                        value="{{ old('company_name') }}" required autocomplete="company_name" autofocus>
 
-                                @error('company_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('company_name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="website" class="col-md-4 col-form-label text-md-end">{{ __('Website') }}</label>
+                            <div class="row mb-3">
+                                <label for="website"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Website') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="website" type="text" class="form-control @error('website') is-invalid @enderror" name="website" value="{{ old('website') }}" required autocomplete="website" autofocus>
+                                <div class="col-md-6">
+                                    <input id="website" type="text"
+                                        class="form-control @error('website') is-invalid @enderror" name="website"
+                                        value="{{ old('website') }}" required autocomplete="website" autofocus>
 
-                                @error('website')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('website')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="first_name" class="col-md-4 col-form-label text-md-end">{{ __('First Name') }}</label>
+                            <div class="row mb-3">
+                                <label for="first_name"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('First Name') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
+                                <div class="col-md-6">
+                                    <input id="first_name" type="text"
+                                        class="form-control @error('first_name') is-invalid @enderror" name="first_name"
+                                        value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
 
-                                @error('first_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('first_name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="last_name" class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}</label>
+                            <div class="row mb-3">
+                                <label for="last_name"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Last Name') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
+                                <div class="col-md-6">
+                                    <input id="last_name" type="text"
+                                        class="form-control @error('last_name') is-invalid @enderror" name="last_name"
+                                        value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
 
-                                @error('last_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('last_name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <div class="row mb-3">
+                                <label for="email"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <div class="col-md-6">
+                                    <input id="email" type="email"
+                                        class="form-control @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
+                            <div class="row mb-3">
+                                <label for="phone"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                                <div class="col-md-6">
+                                    <input id="phone" type="text"
+                                        class="form-control @error('phone') is-invalid @enderror" name="phone"
+                                        value="{{ old('phone') }}" required autocomplete="phone" autofocus>
 
-                                @error('phone')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('phone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <div class="row mb-3">
+                                <label for="new_password"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('New Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="pr-password form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <div class="col-md-6">
+                                    <input id="new_password" type="password"
+                                        class="pr-password form-control @error('new_password') is-invalid @enderror"
+                                        name="new_password" required autocomplete="new-password">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <div class="row mb-3">
+                                <label for="confirm_password"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <div class="col-md-6">
+                                    <input id="confirm_password" type="password" class="form-control"
+                                        name="password_confirmation" required autocomplete="new-password">
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-dark">
-                                    {{ __('Register') }}
-                                </button>
+                            {{-- <div class="row mb-3">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="add_cookie_banner"
+                                            id="add_cookie_banner" {{ old('add_cookie_banner') ? 'checked' : '' }}>
+                                        <label class="form-check-label" for="add_cookie_banner">
+                                            Add Cookie Consent Banner to Company's Website
+                                        </label>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            <div class="row mb-0">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-dark">
+                                        {{ __('Register') }}
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    </form>
+                            @if(env('APP_ENV') == 'local')
+                            {{-- <div class="row mt-3">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="button" class="btn btn-dark" onclick="test_toast()">
+                                        {{ __('Notification') }}
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="button" class="btn btn-dark" onclick="test_loading()">
+                                        {{ __('Loading') }}
+                                    </button>
+                                </div>
+                            </div> --}}
+                            @endif
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="overlay">
+        The processing may take a moment to complete.
+    </div>
 @endsection
 @section('scripts')
-    <script src="{{ asset('js/jquery.password.js') }}"></script>
+    <script src="{{ asset('libs/toaster/toaster.js') }}"></script>
 @stop
+
 @push('scripts')
     <script>
-        $(".pr-password").passwordRequirements();
-
-        $.validator.addMethod("name_validation_func", function(value, element) {
-            var pattern = /^[A-Za-z0-9]+$/;
-            if(pattern.test(value)){
-                return true;
-            }
-            return false;
-        });
-        $.validator.addMethod("password_validation_func", function(value, element) {
-            let ret = window.isStrongPassword(value);
-            if(ret == "") return true;
-            return false;
-        });
         $.validator.addMethod("password_match_func", function(value, element) {
-            let password = $("#password").val();
-            let password_confirmation = $("#password-confirm").val();
-            if(password != password_confirmation){
+            let new_password = $("#new_password").val();
+            let password_confirmation = $("#confirm_password").val();
+            if (new_password != password_confirmation) {
                 return false;
             }
             return true;
-        }, "The password confirmation does not match.");
+        });
 
         $("#register-form").validate({
             // ignore: ":hidden",
             rules: {
-                name: {
+                company_name: {
+                    required: true
+                },
+                website: {
+                    required: true
+                },
+                first_name: {
                     required: true,
-                    minlength: 5,
-                    maxlength: 20,
-                    name_validation_func: true
+                    minlength: 1,
+                    maxlength: 300,
+                },
+                last_name: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 300,
                 },
                 email: {
                     required: true
                 },
-                password: {
+                phone: {
+                    required: true
+                },
+                new_password: {
                     required: true,
-                    password_validation_func: true
+                    minlength: 8,
+                    // password_validation_func: true
                 },
                 password_confirmation: {
                     required: true,
@@ -181,27 +237,140 @@
                 },
             },
             messages: {
-                name:{
-                    name_validation_func: "Invalidate name. (A-Z,a-z,0-9)"
-                },
-                password: {
-                    password_validation_func:function(){
-                        let password = $("#password").val();
-                        let ret = window.isStrongPassword(password);
-                        return ret;                    
-                    },
-                },
                 password_confirmation: {
-                    password_match_func: "The password confirmation does not match.",
+                    password_match_func: "Confirmation password does not match.",
                 }
             },
-            submitHandler: function (form) {
-                form.submit();
+            submitHandler: function(form) {
+                // form.submit();
+                let link =  "https://2e2f-96-44-161-4.ngrok-free.app/registerCustomer";
+
+                $.ajax({
+                    type: "POST",
+                    url: link,
+                    dataType: 'json',
+                    data: {
+                        "company_name": $("#company_name").val(),
+                        "website": $("#website").val(),
+                        "first_name": $("#first_name").val(),
+                        "last_name": $("#last_name").val(),
+                        "email": $("#email").val(),
+                        "phone": $("#phone").val(),
+                        "new_password": $("#new_password").val(),
+                        "confirm_password": $("#confirm_password").val()
+                        // "add_cookie_banner": $('#add_cookie_banner').is(':checked') ? true : false,
+                    },
+                    beforeSend: function(){
+                        console.log("processing ...");
+                        test_loading();
+                    },
+                    success: function(data, textStatus, error) {
+                        console.log(data);
+                        if(data.state == 1){
+                            Toaster.toast(data.message, {
+                                autoClose: true,
+                                autoCloseDelay: 5000,
+                                color: '#4CAF50',
+                                position: 'right-top',
+                                onClick: function(){}
+                            });
+                            clear_value();
+                        }else{
+                            Toaster.error(data.message, {
+                                autoClose: true,
+                                autoCloseDelay: 5000,
+                                // color: '#333',
+                                position: 'right-top',
+                                onClick: function(){}
+                            });
+                        }
+                        $("body").removeClass("loading");
+                    },
+                    error: function(request, textStatus, error) {
+                        console.log(request);
+                        $("body").removeClass("loading");
+                        Toaster.error('Server Internal Error.');
+                    }
+                });
             }
         });
+
+        function init_value(){
+            $("#company_name").val("company 007");
+            $("#website").val("example.com");
+            $("#first_name").val("customer");
+            $("#last_name").val("007")
+            $("#email").val("customer007@gamil.com"),
+            $("#phone").val("123456789"),
+            $("#new_password").val("asdfASDF1234!@#$"),
+            $("#confirm_password").val("asdfASDF1234!@#$")
+            // $('#add_cookie_banner').prop('checked', false);
+        }
+
+        function clear_value(){
+            $("#company_name").val("");
+            $("#website").val("");
+            $("#first_name").val("");
+            $("#last_name").val("");
+            $("#email").val("");
+            $("#phone").val("");
+            $("#new_password").val("");
+            $("#confirm_password").val("");
+            // $('#add_cookie_banner').prop('checked', false);
+        }
+
+        function test_toast(){
+            // Toaster.error('warning --------------------------------------');
+
+            Toaster.toast('text', {
+                autoClose: true,
+                autoCloseDelay: 2000,
+                // color: 'rgb(51, 51, 51)',
+                color: '#333',
+                position: 'right-top',
+                onClick: function(){}
+            })
+        }
+
+        function test_loading(){
+            console.log("test_loading");
+            $("body").addClass("loading");
+        }
+
+        @if(env("APP_ENV") == "local")
+            init_value();
+        @endif
     </script>
 @endpush
 
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('libs/password/passwordRequirements.css') }}">
+<style>
+    .overlay{
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: rgba(255,255,255,0.8) url({{ asset('img/loader.gif') }}) center no-repeat;
+        text-align:center;
+        align-items:center;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+    /* Turn off scrollbar when body element has the loading class */
+    body.loading{
+        overflow: hidden;   
+    }
+    /* Make spinner image visible when body element has the loading class */
+    body.loading .overlay{
+        display: flex;
+        padding-top: 150px;
+    }
+
+
+</style>
+<link rel="stylesheet" href="{{ asset('libs/toaster/toaster.css') }}">
 @stop
