@@ -269,8 +269,8 @@
                         "phone": $("#phone").val(),
                         "new_password": $("#new_password").val(),
                         "confirm_password": $("#confirm_password").val(),
-                        // "add_cookie_banner": $('#add_cookie_banner').is(':checked') ? true : false,
-                        "active_send_setup_email": $('#active_send_setup_email').is(':checked') ? true : false
+                        // "add_cookie_banner": $('#add_cookie_banner').is(':checked') ? 1 : 0,
+                        "active_send_setup_email": $('#active_send_setup_email').is(':checked') ? 1 : 0
                     },
                     beforeSend: function(){
                         console.log("processing ...");
