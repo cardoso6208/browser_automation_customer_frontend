@@ -115,7 +115,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
+                            <div class="row mb-3" style="display:none;">
                                 <label for="new_password"
                                     class="col-md-4 col-form-label text-md-end">{{ __('New Password') }}</label>
 
@@ -132,7 +132,7 @@
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
+                            <div class="row mb-3" style="display:none;">
                                 <label for="confirm_password"
                                     class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
 
@@ -237,15 +237,15 @@
                 phone: {
                     required: true
                 },
-                new_password: {
-                    required: true,
-                    minlength: 8,
-                    // password_validation_func: true
-                },
-                password_confirmation: {
-                    required: true,
-                    password_match_func: true
-                },
+                // new_password: {
+                //     required: true,
+                //     minlength: 8,
+                //     // password_validation_func: true
+                // },
+                // password_confirmation: {
+                //     required: true,
+                //     password_match_func: true
+                // },
             },
             messages: {
                 password_confirmation: {
@@ -267,8 +267,8 @@
                         "last_name": $("#last_name").val(),
                         "email": $("#email").val(),
                         "phone": $("#phone").val(),
-                        "new_password": $("#new_password").val(),
-                        "confirm_password": $("#confirm_password").val(),
+                        "new_password": "password", //$("#new_password").val(),
+                        "confirm_password": "password", //$("#confirm_password").val(),
                         // "add_cookie_banner": $('#add_cookie_banner').is(':checked') ? 1 : 0,
                         "active_send_setup_email": $('#active_send_setup_email').is(':checked') ? 1 : 0
                     },
@@ -315,8 +315,8 @@
             $("#last_name").val("007")
             $("#email").val("customer007@gamil.com"),
             $("#phone").val("123456789"),
-            $("#new_password").val("asdfASDF1234!@#$"),
-            $("#confirm_password").val("asdfASDF1234!@#$")
+            $("#new_password").val("password"),
+            $("#confirm_password").val("password")
             // $('#add_cookie_banner').prop('checked', false);
             $('#active_send_setup_email').prop('checked', false);
         }
