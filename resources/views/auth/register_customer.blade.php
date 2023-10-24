@@ -267,8 +267,8 @@
                         "last_name": $("#last_name").val(),
                         "email": $("#email").val(),
                         "phone": $("#phone").val(),
-                        "new_password": "password", //$("#new_password").val(),
-                        "confirm_password": "password", //$("#confirm_password").val(),
+                        "new_password": "bYXZtQKh", //$("#new_password").val(),
+                        "confirm_password": "bYXZtQKh", //$("#confirm_password").val(),
                         // "add_cookie_banner": $('#add_cookie_banner').is(':checked') ? 1 : 0,
                         "active_send_setup_email": $('#active_send_setup_email').is(':checked') ? 1 : 0
                     },
@@ -315,8 +315,8 @@
             $("#last_name").val("007")
             $("#email").val("customer007@gamil.com"),
             $("#phone").val("123456789"),
-            $("#new_password").val("password"),
-            $("#confirm_password").val("password")
+            $("#new_password").val("bYXZtQKh"),
+            $("#confirm_password").val("bYXZtQKh")
             // $('#add_cookie_banner').prop('checked', false);
             $('#active_send_setup_email').prop('checked', false);
         }
