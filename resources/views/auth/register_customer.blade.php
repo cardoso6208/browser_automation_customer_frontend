@@ -7,11 +7,15 @@
                 <div class="card">
                     <div class="card-header"
                         style="background:linear-gradient(118deg, rgba(11, 17, 27, 1), rgba(11, 17, 27, 0.7))!important; color:white;">
-                        {{ __('Register') }}</div>
+                        {{ __('Register') }}
+                    </div>
 
                     <div class="card-body">
                         <form method="POST" action="{{ route('register') }}" id="register-form">
                             @csrf
+
+                            <input type="hidden" id="register_type" name="register_type" value="1">
+                            <!-- 1: customer, 2: business -->
 
                             <div class="row mb-3">
                                 <label for="company_name"
@@ -261,6 +265,7 @@
                     url: link,
                     dataType: 'json',
                     data: {
+                        "register_type": $("#register_type").val(),
                         "company_name": $("#company_name").val(),
                         "website": $("#website").val(),
                         "first_name": $("#first_name").val(),
@@ -309,11 +314,11 @@
         });
 
         function init_value(){
-            $("#company_name").val("company 007");
+            $("#company_name").val("business 002");
             $("#website").val("example.com");
-            $("#first_name").val("customer");
-            $("#last_name").val("007")
-            $("#email").val("customer007@gamil.com"),
+            $("#first_name").val("business");
+            $("#last_name").val("002")
+            $("#email").val("business002@gamil.com"),
             $("#phone").val("123456789"),
             $("#new_password").val("bYXZtQKh"),
             $("#confirm_password").val("bYXZtQKh")
@@ -355,6 +360,17 @@
         @if(env("APP_ENV") == "local")
             // init_value();
         @endif
+
+        window.onload = function (){
+            if (window.location.href.toString().toLocaleLowerCase().indexOf("customer.leadpipe.com") > -1){
+                $("#register_type").val("1"); // customer
+            }else if(window.location.href.toString().toLocaleLowerCase().indexOf("customer.leadpipe.com") > -1){
+                $("#register_type").val("2"); // business
+            }else{
+                $("#register_type").val("2"); // localhost - test business
+            }
+            console.log("window load function");
+        }
     </script>
 @endpush
 
