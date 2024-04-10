@@ -185,7 +185,7 @@
 								</div>
 							</div>
 
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-md-12">
 									<label for="plan"	class="col-md-4 col-form-label text-md-start">
 										{{ __('Select Plan') }}
@@ -200,9 +200,9 @@
 										>
 									</div>
 								</div>
-							</div>
+							</div> -->
 
-							<div class="row">
+							<!-- <div class="row">
 								<div class="col-md-6">
 									<div class="offset-md-4">
 										<div class="form-check">
@@ -229,7 +229,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<!-- <div class="col-md-6 d-flex gap-4">
 									<div class="col-md-6 offset-md-4">
 										<div class="form-check">
